@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- <script src="scripts/vue.js"></script> -->
+    <link rel="stylesheet" href="type.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="vue-app">
+       <h1>v-if 条件</h1>
+       <button @click="error=!error">Toggle Error</button>
+       <button @click="success=!success">Toggle Success</button>
+
+       <p v-if="error">网络连接错误:404</p>
+       <p v-else-if="success">网络连接成功:200</p>
+
+       <p v-show="error">网络连接错误:404</p>  //对应display:none
+       <p v-show="success">网络连接成功:200</p>
+    </div>
+
+    
+
+
+
+    <script src="scripts/index.js"></script>
+</body>
+</html>
